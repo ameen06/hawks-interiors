@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawks Interiors - Premium Interior Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#5a3712',
+                        secondary: '#f5f5f5',
+                        dark: '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .container {
+            max-width: 1280px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-poppins text-dark">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-2xl font-bold">Hawks Interiors</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#products" class="hover:text-primary transition-colors">Products</a></li>
+                    <li><a href="#services" class="hover:text-primary transition-colors">Services</a></li>
+                    <li><a href="#projects" class="hover:text-primary transition-colors">Projects</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="bg-primary text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors">Contact Us</a>
+            <button class="md:hidden text-dark" id="mobile-menu-button">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white w-full py-4 px-4 md:hidden">
+            <ul class="space-y-4">
+                <li><a href="#home" class="block hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#products" class="block hover:text-primary transition-colors">Products</a></li>
+                <li><a href="#services" class="block hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#projects" class="block hover:text-primary transition-colors">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Make your home more Comfortable with Aesthetic Facilities</h1>
+                <p class="text-gray-600 mb-8 text-lg">We provide premium interior design services to transform your living spaces into beautiful, functional environments that reflect your personal style.</p>
+                <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-md inline-block hover:bg-blue-600 transition-colors">Get Started</a>
+            </div>
+            <div class="animate-slide-up">
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&h=658&q=80" alt="Modern Interior Design" class="rounded-lg shadow-lg w-full h-auto object-cover"></li>
+                              <li class="splide__slide"><img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&h=658&q=80" alt="Modern Interior Design" class="rounded-lg shadow-lg w-full h-auto object-cover"></li>
+                              <li class="splide__slide"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&h=658&q=80" alt="Modern Interior Design" class="rounded-lg shadow-lg w-full h-auto object-cover"></li>
+                          </ul>
+                    </div>
+                  </section>
+                
+            </div>
+        </div>
+        
+        <!-- Trusted By Section -->
+   
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What we can do for our <span class="text-primary">beloved customers</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive interior design services tailored to your needs and preferences.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg hover-scale reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-couch text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Interior Design</h3>
+                    <p class="text-gray-600">Complete home interior work including modular kitchen, wall drops, modern bedrooms, TV units, and more.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover-scale reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-kitchen-set text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Modular Kitchen</h3>
+                    <p class="text-gray-600">Custom modular kitchen solutions designed for functionality and aesthetics.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover-scale reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bed text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Bedroom Solutions</h3>
+                    <p class="text-gray-600">Modern bedroom designs with custom furniture and storage solutions.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover-scale reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tv text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">TV Units</h3>
+                    <p class="text-gray-600">Custom TV units that combine style with practical storage solutions.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover-scale reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-stairs text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Stairs & Railings</h3>
+                    <p class="text-gray-600">Custom stair designs that combine safety with elegant aesthetics.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg hover-scale reveal">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-roller text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ceiling & Wall Work</h3>
+                    <p class="text-gray-600">Gypsum ceiling designs, wall drops, and custom wall treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Design <span class="text-primary">Inspirations</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover beautiful interior design ideas and possibilities.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="reveal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale group">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Clean Interior" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Clean Interior</h3>
+                            <p class="text-gray-600">Simple, clean designs that maximize space and light.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale group">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Minimalist Design" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Minimalist</h3>
+                            <p class="text-gray-600">Elegant minimalist designs focusing on essential elements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale group">
+                        <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Cozy Living Room" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Cozy</h3>
+                            <p class="text-gray-600">Warm and inviting spaces designed for comfort.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale group">
+                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Modern Kitchen" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Modern Kitchen</h3>
+                            <p class="text-gray-600">Sleek, functional, and modern kitchen designs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover-scale group">
+                        <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="Luxury Bathroom" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Luxury Bathroom</h3>
+                            <p class="text-gray-600">Elegant bathroom designs with premium fixtures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Premium <span class="text-primary">Products</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We offer a wide range of interior products and accessories to enhance your living spaces.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="reveal">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover-scale">
+                        <img src="https://images.unsplash.com/photo-1540638349517-3abd5afc5847?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Curtains" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Curtains</h3>
+                            <p class="text-gray-600">Premium curtains in various styles, colors, and fabrics to your interior design.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover-scale">
+                        <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Rugs" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Rugs</h3>
+                            <p class="text-gray-600">Elegant rugs that add warmth and style to any room in your home.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover-scale">
+                        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Chairs" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Chairs</h3>
+                            <p class="text-gray-600">Stylish and comfortable chairs for every room and purpose.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover-scale">
+                        <img src="https://images.unsplash.com/photo-1594040226829-7f251ab46d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Wall Decor" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Wall Decor</h3>
+                            <p class="text-gray-600">Beautiful wall art, frames, and decorative pieces to enhance your walls.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover-scale">
+                        <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Artificial Plants" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Artificial Plants</h3>
+                            <p class="text-gray-600">Lifelike artificial plants that add a touch of nature without maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover-scale">
+                        <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="Mirrors" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Mirrors</h3>
+                            <p class="text-gray-600">Elegant mirrors that add depth and light to your spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="mt-12 text-center reveal">
+                <a href="#" class="inline-block border border-primary text-primary px-8 py-3 rounded-md hover:bg-primary hover:text-white transition-colors">View All Products</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">More Product Categories</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <ul class="space-y-3">
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Teapoy</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Clock</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Wallpaper</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Metal Arts</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Frames</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Calligraphy</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="space-y-3">
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Bedsheets</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Ceramic Pots</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Wall 3D Panels</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Glass Tiles</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Cushions</li>
+                                <li class="flex items-center"><i class="fas fa-check text-primary mr-2"></i> Lamps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Interior Products" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+=
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-8 md:mb-0 md:w-2/3 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Have an Interior Project?</h2>
+                    <p class="text-white/80 text-lg">Let's discuss how we can transform your space into something extraordinary.</p>
+                </div>
+                <div class="reveal">
+                    <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-md inline-block hover:bg-gray-100 transition-colors font-medium">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <!-- Contact Section -->
+     <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get in <span class="text-primary">Touch</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or ready to start your project? Contact us today.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="reveal">
+                    <div class="p-8 rounded-lg  mb-8">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start group hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                                    <i class="fas fa-map-marker-alt text-primary group-hover:text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2 text-lg">Our Location</h4>
+                                    <p class="text-gray-600">123 Design Street, Creative City, 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start group hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                                    <i class="fas fa-phone text-primary group-hover:text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2 text-lg">Phone Number</h4>
+                                    <p class="text-gray-600">+1 (123) 456-7890</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start group hover:scale-105 transition-transform">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
+                                    <i class="fas fa-envelope text-primary group-hover:text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-2 text-lg">Email Address</h4>
+                                    <p class="text-gray-600">info@hawksinteriors.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class=" p-7 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-6">Connect With Us</h3>
+                        <p class="text-gray-600 mb-8">Follow us on social media or contact us directly via WhatsApp for quick responses.</p>
+                        
+                        <div class="flex space-x-6 mb-8">
+                            <a href="#" class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-all hover:scale-110">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition-all hover:scale-110">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="w-14 h-14 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-all hover:scale-110">
+                                <!-- Replace all instances of fa-x-twitter with fa-twitter -->
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                        
+                        <a href="https://wa.me/1234567890" class="bg-green-500 text-white px-8 py-4 rounded-md flex items-center justify-center hover:bg-green-600 transition-all hover:scale-105 group">
+                            <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                            <span class="text-lg">Chat on WhatsApp</span>
+                            <i class="fas fa-arrow-right ml-3 transform group-hover:translate-x-2 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hawks Interiors</h3>
+                    <p class="text-gray-400 mb-6">We create beautiful, functional spaces that reflect your personal style and meet your practical needs.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <!-- <i class="fab fa-facebook-f"></i> -->
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <!-- <i class="fab fa-instagram"></i> -->
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Curtains</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Rugs</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Furniture</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Wall Decor</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Interior Design</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Modular Kitchen</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Bedroom Solutions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">TV Units</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Ceiling Work</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>123 Design Street, Creative City, 12345</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2"></i>
+                            <span>+1 (123) 456-7890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>info@hawksinteriors.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">&copy; 2023 Hawks Interiors. All rights reserved.</p>
+                    <ul class="flex space-x-6 text-gray-400">
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <!-- Add this right after the opening <body> tag -->
+    <div class="fixed left-0 top-1/2 transform -translate-y-1/2 z-50 flex flex-col space-y-4 p-3 bg-white/80 backdrop-blur-sm rounded-r-lg shadow-lg">
+        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-all">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-all">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-all">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://wa.me/1234567890" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:scale-110 transition-all">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <a href="https://wa.me/1234567890" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Scroll Reveal Animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            var splide = new Splide( '.splide' , {
+                type    : 'loop',
+                autoplay: true,
+                perPage : 1,
+            });
+            splide.mount();
+        });
+    </script>
+</body>
+</html>
